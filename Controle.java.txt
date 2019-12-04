@@ -1,0 +1,53 @@
+import java.util.Random;
+
+public class Controle {
+
+	
+	
+	Random sort = new Random();
+	private int alvo; 
+	private int pontuacao;
+	private int tentativa;
+	
+	
+    
+	
+	 public void inicializa(){
+		 
+		 alvo = sort.nextInt(10) +1;
+        pontuacao = 100;
+       
+        System.out.println("["+alvo+"]");
+       
+	 }
+	 
+	 
+	 public boolean check (int x) {
+	    boolean res;
+	    
+	    tentativa++;
+		
+	    if (x != alvo) {
+			res = false;
+		 pontuacao = pontuacao -5;
+		 }else {
+			 res = true;
+			 
+		 }
+		 
+		return res;
+		
+		
+	}
+	
+	public int  pontuacao(){
+		 return pontuacao;
+	 }
+	public int  tentativa(){
+		 return tentativa;
+	 }
+	 
+	 
+	 
+	 
+}

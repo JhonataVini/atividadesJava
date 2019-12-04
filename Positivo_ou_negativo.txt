@@ -1,0 +1,20 @@
+Em matematica, a operacao "mod" tem como resultado o resto de uma divisao. Por exemplo: 
+
+7 / 3 --> quociente 2 e resto 1 
+7 mod 3 = 1 
+
+25 / 7 --> quociente 3 e resto 4 
+25 mod 7 = 4 
+
+16 / 4 --> quociente 4 e resto 0 
+16 mod 4 = 0
+ 
+    
+
+    
+    
+
+    
+    
+
+

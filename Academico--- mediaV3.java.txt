@@ -1,0 +1,25 @@
+
+public class Academico {
+	
+	
+	private final float corteAprova = 6;
+	private final float corteReprova = 3;
+	
+	public String situacao(float nota) {
+		String res = "";
+		
+		if(nota >= corteAprova)
+		    res =  "APROVADO";
+		
+	    if (nota< corteReprova )
+	    	res = "REPROVADO";
+	   
+	    if (nota >=corteReprova && nota < corteAprova)
+	    	res = "EXAME";
+	    
+	    
+	    
+	    return res;
+	
+	}
+}
