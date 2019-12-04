@@ -1,0 +1,25 @@
+
+public class Util {
+	public float maior(float a, float b) {
+		float res;
+		if(a > b)
+		    res= a;
+		else
+			res= b;
+		return res;
+	}
+		
+	public float mediaSimples(float a, float b, float c) {	
+		
+ 	return (a + b + c)/3;
+		 
+	}
+ 	public  float mediaSimples(float a, float b) {	
+		
+ 	 	return (a + b)/2;
+ 			 
+ 	
+ 	
+	}	
+		
+}

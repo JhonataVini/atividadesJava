@@ -1,0 +1,5 @@
+package entidade;
+
+public class Doacao extends Aporte {
+
+}

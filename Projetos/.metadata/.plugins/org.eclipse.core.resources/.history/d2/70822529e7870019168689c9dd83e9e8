@@ -1,0 +1,77 @@
+package teste;
+
+import java.util.ArrayList;
+
+import entidade.Aporte;
+import entidade.Projeto;
+
+public class Console {
+	public static void main(String[] args) {
+		//Projetos
+		Projeto doapet = new Projeto();
+		doapet.nome = "Doacao de Caes";
+		
+		Projeto pratocheio = new Projeto();
+		pratocheio.nome = "Bom prato Grarapiranga";
+		
+		Projeto semfrio = new Projeto();
+		semfrio.nome = "Falo não";
+	
+		//aportes
+		Aporte ap1 = new Aporte(1,1000);//Tipo, valor
+		Aporte ap2 = new Aporte(2,500);//Tipo, valor
+		Aporte ap3 = new Aporte(1,100);//Tipo, valor
+		
+		ap1.projeto = pratocheio;
+		ap2.projeto = doapet;
+		ap3.projeto = semfrio;
+		
+		System.out.println("Aportes\n--------------");
+		apresenta(ap1);
+		apresenta(ap2);
+		apresenta(ap3);
+		
+		
+
+		ArrayList<Projeto> listaProjetos = new ArrayList<Projeto>();
+			listaProjetos.add(doapet);
+			listaProjetos.add(pratocheio);
+			listaProjetos.add(semfrio);
+		
+		
+			semfrio.cancela();
+			pratocheio.conclui();
+			
+			//relatorio
+			apresenta(listaProjetos);
+		
+		System.out.println("Fim");
+		
+	}
+	
+	
+	public static void apresenta(ArrayList<Projeto> listaProjetos) {
+		//Relatorio
+				Projeto	projtemp = new Projeto();
+				System.out.println(" ");
+				System.out.println("Relatório\n--------------");
+				
+				for(int i = 0; i < listaProjetos.size(); i++) {
+					projtemp = listaProjetos.get(i);	
+					System.out.println("["+projtemp.getEstadoStr()+"] "+projtemp.nome);
+				}
+				System.out.println("\n--------------");
+	} 
+	
+	public static void apresenta(Projeto projeto) {
+		
+	}
+	
+    public static void apresenta(Aporte aporte) {
+    	
+    	
+    	System.out.println("["+aporte.getTipoStr()+"] "+aporte.valor() + "/"+ aporte.saldo() );
+	}
+	
+
+}

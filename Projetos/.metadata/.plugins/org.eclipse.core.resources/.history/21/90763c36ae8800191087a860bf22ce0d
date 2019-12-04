@@ -1,0 +1,21 @@
+package entidade;
+
+public class Investimento extends Aporte {
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	public double saldo() {		
+		 return super.saldo()/2;		
+		}
+		
+		public String getTipoStr() {
+			return "Investimento";
+		}
+}

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner leia = new Scanner(System.in);  
+    boolean palin = true;  
+    
+    System.out.println("Digite uma palavra: ");
+     String palavra = leia.nextLine();
+   
+   int fim = palavra.length()-1;
+  
+     for (int i=0; i<palavra.length();i++){
+     if (palavra.charAt(i)  !=palavra.charAt(fim-i))
+       palin = false;
+      
+
+   }
+   if(palin) 
+   System.out.println(palavra + " E PALINDROMO");
+   else
+   System.out.println(palavra + " NAO E PALINDROMO");
+
+   System.out.println("fim!");
+  }
+}

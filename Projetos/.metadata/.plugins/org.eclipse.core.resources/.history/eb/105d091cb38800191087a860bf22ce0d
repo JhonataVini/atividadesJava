@@ -1,0 +1,24 @@
+package entidade;
+
+/**
+ * @author jhonata.lopes.a 
+ */
+public abstract class Aporte {
+
+	private double valor;
+	public Projeto projeto;
+	
+	
+	public void setValor(double v) {		
+		 this.valor = v;	
+	}
+	
+	public double valor() {			
+		return this.valor;	
+	}
+	
+	public abstract String getTipoStr(); 
+	
+	
+	public abstract double saldo();
+}

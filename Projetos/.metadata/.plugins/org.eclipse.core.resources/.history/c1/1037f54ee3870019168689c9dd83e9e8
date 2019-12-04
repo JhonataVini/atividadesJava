@@ -1,0 +1,50 @@
+package teste;
+
+import java.util.ArrayList;
+
+import entidade.Projeto;
+
+public class Console {
+	public static void main(String[] args) {
+		
+		Projeto doapet = new Projeto();
+		doapet.nome = "Doacao de Caes";
+		
+		Projeto pratocheio = new Projeto();
+		pratocheio.nome = "Bom prato Grarapiranga";
+		
+		Projeto semfrio = new Projeto();
+		semfrio.nome = "Falo não";
+	
+
+		ArrayList<Projeto> listaProjetos = new ArrayList<Projeto>();
+			listaProjetos.add(doapet);
+			listaProjetos.add(pratocheio);
+			listaProjetos.add(semfrio);
+		
+		
+			semfrio.cancela();
+			pratocheio.conclui();
+			
+			//relatorio
+			apresenta(listaProjetos);
+		
+		System.out.println("Fim");
+		
+	}
+	
+	
+	public static void apresenta(ArrayList<Projeto> listaProjetos) {
+		//Relatorio
+				Projeto	projtemp = new Projeto();
+				System.out.println("Relatório\n--------------");
+				for(int i = 0; i < listaProjetos.size(); i++) {
+					projtemp = listaProjetos.get(i);	
+					System.out.println("["+projtemp.getEstadoStr()+"] "+projtemp.nome);
+				}
+				System.out.println("--------------");
+	} 
+	
+	
+
+}

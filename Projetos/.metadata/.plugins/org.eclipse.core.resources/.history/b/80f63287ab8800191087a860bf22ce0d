@@ -1,0 +1,17 @@
+package entidade;
+
+public class Investimento extends Aporte {
+
+	public Investimento(double valor) {
+		super(valor);
+		// TODO Auto-generated constructor stub
+	}
+
+	public double saldo() {		
+		 return super.saldo()/2;		
+		}
+		
+		public String getTipoStr() {
+			return "Investimento";
+		}
+}

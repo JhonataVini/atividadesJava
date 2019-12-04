@@ -1,0 +1,13 @@
+package entidade;
+
+public class Doacao extends Aporte {
+
+	public Doacao(int tipo, double valor) {
+		super(tipo, valor);
+		
+		
+		
+	}
+
+	
+}

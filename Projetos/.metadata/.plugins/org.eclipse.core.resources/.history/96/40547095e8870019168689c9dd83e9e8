@@ -1,0 +1,51 @@
+package entidade;
+
+/**
+ * @author jhonata.lopes.a 
+ */
+public class Aporte {
+
+	private double valor;
+	//private int tipo; //1- Doacao 2- Investimento
+	public Projeto projeto;
+	
+	
+	public Aporte(int tipo, double valor) {
+		this.tipo= tipo;
+		this.valor = valor;
+	}
+	
+	
+	public double valor() {
+				
+		return this.valor;
+		
+	}
+	
+	public double saldo() {
+		
+        double ret = 0;
+		
+		if(this.tipo ==1)
+			ret = this.valor;
+		
+		if(this.tipo ==2)
+			ret = this.valor/2;
+		
+		
+		return ret;
+	}
+	
+	
+	public String getTipoStr() {
+		
+		if(this.tipo == 1) {
+			return "Doação";
+		}
+		if(this.tipo == 2) {
+			return "Investimento";
+		}
+		
+			return "FALHOU!!!";
+		}
+}

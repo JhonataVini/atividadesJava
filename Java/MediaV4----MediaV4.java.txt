@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class MediaV4{
+
+		public static void main(String[] args) {
+		 Scanner leia = new Scanner(System.in);	
+		
+	Util util = new Util();
+	Academico regra = new Academico();
+	
+	
+	
+	    float p1, p2, t1, t2, s1, s2;
+		float media, mp, mt, ms, exame;
+		
+		
+		p1 = leia.nextFloat();
+		p2 = leia.nextFloat();
+		t1 = leia.nextFloat();
+		t2 = leia.nextFloat();
+		s1 = leia.nextFloat();
+		s2 = leia.nextFloat();
+
+		
+		mp = util.maior(p1,p2);
+		mt = util.maior(t1,t2);
+		ms = util.maior(s1,s2);
+		
+		media = util.mediaSimples(mp, mt, ms);
+		
+		
+		System.out.println("Media final = " + media);
+		System.out.println("situacao = " + regra.situacao(media));
+		
+		if (regra.estaDeExame(media)) {
+			
+			exame = leia.nextFloat();
+			media = util.mediaSimples(exame,media);
+		
+			System.out.println("Media Especial = " + media);
+			System.out.println("situacao Final = " + regra.situacao(media));
+			
+			
+			
+			
+		}
+		
+		System.out.println("------\"Fim do relatorio");
+		
+	
+		
+		
+	}
+
+		
+
+}
+

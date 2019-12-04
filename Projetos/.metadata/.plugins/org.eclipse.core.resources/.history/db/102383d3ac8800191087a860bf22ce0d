@@ -1,0 +1,29 @@
+package entidade;
+
+public class Aposta extends Aporte {
+
+	
+	
+	
+	
+	
+	
+	
+	
+	public double saldo() {
+		if(projeto.getEstadoCode()==9)	
+	       return super.saldo() *2;
+		
+		 return super.saldo() * -2;
+		
+	}
+	
+	public String getTipoStr() {
+		
+		
+		
+		return "Aposta";
+	}
+
+	
+}

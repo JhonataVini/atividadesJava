@@ -1,0 +1,67 @@
+import java.util.Random;
+
+public class Controle {
+
+	Random sort = new Random();
+	private int alvo;
+	private int pontuacao;
+	private int tentativa;
+
+	public void inicializa() {
+		alvo = sort.nextInt(10) + 1;
+		pontuacao = 100;
+		tentativa = 0;
+		//System.out.print("[" + alvo + "]");
+	}
+
+	public boolean valida(int chute) {
+		boolean res;
+
+		tentativa++;
+
+		if (chute != alvo) {
+			res = false;
+			pontuacao = pontuacao - (tentativa * 3);
+		} else {
+			res = true;
+		}
+
+		return res;
+	}
+
+	public int pontuacao() {
+		if (pontuacao > 0)
+			return pontuacao;
+		return 0;
+	}
+
+	public int tentativa() {
+		return tentativa;
+	}
+
+	/**
+	 * @TODO
+	 */
+	public void mostraDica(int chute){
+		pontuacao = pontuacao - 10;
+		if(chute == 0 || chute == alvo)
+			System.out.println("[dica] Falha!");
+		else if(chute > alvo)
+			System.out.println("[dica] Alvo é MENOR que " + chute);
+		else 
+			System.out.println("[dica] Alvo é MAIOR que " + chute);
+			
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

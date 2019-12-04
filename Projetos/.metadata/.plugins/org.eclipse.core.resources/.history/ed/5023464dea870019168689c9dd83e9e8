@@ -1,0 +1,23 @@
+package entidade;
+
+public class Doacao extends Aporte {
+
+	public Doacao( double valor) {
+		super(valor);
+	}
+	
+	public double saldo() {
+		
+	 return super saldo();
+		
+	}
+	
+	public String getTipoStr() {
+		
+		
+		
+		return "Doação";
+	}
+
+	
+}

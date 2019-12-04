@@ -1,0 +1,10 @@
+package entidade;
+
+public class Investimento extends Aporte {
+
+	public Investimento(int tipo, double valor) {
+		super(tipo, valor);
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class IMC {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		float peso,altura,imc;
+		
+		System.out.print("Digite seu peso: ");
+		peso = teclado.nextFloat();
+		System.out.println("Digite sua altura: ");
+		altura = teclado.nextFloat();
+         
+		
+	
+		//imc = peso / (altura * altura);
+		imc = altura * altura;
+				imc = peso/imc;
+				
+		String status= "Erro. classificacao nao encontrada !";
+		
+		
+		if(imc < 16)
+	           status = " Comer Mais ";
+		if(imc>= 16 && imc< 17);
+	           status = " Magro";
+	    if(imc>=17 && imc<30 )
+		       status = " Tranquilo";
+	    if(imc >= 30 && imc <40)
+		       status = "Fazer Exercicio";
+		if(imc >=40)
+		       status = "Obeso";
+		
+		   
+		System.out.println("Peso = " + peso);
+		System.out.println("Altura = " + altura);
+		System.out.println("Seu IMC = " + imc);
+		System.out.println("categoria = " + status);
+		System.out.println("Fim!");
+	
+	
+	
+	}
+
+}

@@ -1,0 +1,24 @@
+package entidade;
+
+public class Aposta extends Aporte {
+
+	public Aposta( double valor) {
+		super(valor);
+	}
+	
+	public double saldo() {
+		
+		
+	 return super.saldo();
+		
+	}
+	
+	public String getTipoStr() {
+		
+		
+		
+		return "Aposta";
+	}
+
+	
+}
